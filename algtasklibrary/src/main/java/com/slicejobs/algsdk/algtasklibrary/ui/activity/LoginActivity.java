@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -59,6 +60,11 @@ public class LoginActivity extends BaseActivity {
 
         accountView = new AccountLoginFragment();
         messageView = new ShortMsgLoginFragment();
+
+        tabs.setSelectedTabIndicatorColor(getResources().getColor(R.color.color_base));
+        tabs.setTabTextColors(getResources().getColor(R.color.text_color6), getResources().getColor(R.color.text_color7));
+        tabs.setTabMode(TabLayout.MODE_SCROLLABLE);
+        tabs.setBackgroundColor(Color.TRANSPARENT);
 
         //下划线与内容同宽
         tabs.post(new Runnable() {
