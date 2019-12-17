@@ -89,7 +89,7 @@ public class SliceApp{
 
     private void mainProcessInit() {
 
-        //initImageLoader(CONTEXT);
+        initImageLoader(CONTEXT);
 
         // 设置AuthKey
         String authKey = PrefUtil.make(CONTEXT, PrefUtil.PREFERENCE_NAME).getString(AppConfig.AUTH_KEY, SliceStaticStr.NATIVE_TOKEN_ISNULL);
