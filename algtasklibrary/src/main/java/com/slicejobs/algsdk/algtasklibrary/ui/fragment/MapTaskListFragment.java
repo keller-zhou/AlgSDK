@@ -44,6 +44,7 @@ import com.slicejobs.algsdk.algtasklibrary.ui.widget.ActionSheetDialog;
 import com.slicejobs.algsdk.algtasklibrary.ui.widget.refresh.SwipeRefreshLayout;
 import com.slicejobs.algsdk.algtasklibrary.utils.BusProvider;
 import com.slicejobs.algsdk.algtasklibrary.utils.DateUtil;
+import com.slicejobs.algsdk.algtasklibrary.utils.DensityUtil;
 import com.slicejobs.algsdk.algtasklibrary.utils.OpenLocalMapUtil;
 import com.slicejobs.algsdk.algtasklibrary.utils.PrefUtil;
 import com.slicejobs.algsdk.algtasklibrary.utils.SignUtil;
@@ -613,6 +614,20 @@ public class MapTaskListFragment extends BaseFragment {
         LinearLayout notOpenAnyMoreLayout = (LinearLayout) view.findViewById(R.id.not_open_anymore_layout);
         ArrayList<String> oneTwoStarAdvices = new ArrayList<>();
         ArrayList<String> threeFourStarAdvices = new ArrayList<>();
+
+        ratingBar.setNumStars(5);
+        ratingBar.setMinimumStars(0);
+        ratingBar.setRating(0);
+        ratingBar.setStarPadding(DensityUtil.dip2px(getActivity(), 5));
+        ratingBar.setStepSize(1);
+        ratingBar.setStarWidth(DensityUtil.dip2px(getActivity(), 35));
+        ratingBar.setStarHeight(DensityUtil.dip2px(getActivity(), 35));
+        ratingBar.setIsIndicator(false);
+        ratingBar.setClickable(true);
+        ratingBar.setScrollable(true);
+        ratingBar.setClearRatingEnabled(true);
+        ratingBar.setEmptyDrawableRes(R.drawable.star_nosel);
+        ratingBar.setFilledDrawableRes(R.drawable.star_sel);
 
         ratingBar.setOnRatingChangeListener(new BaseRatingBar.OnRatingChangeListener() {
             @Override
