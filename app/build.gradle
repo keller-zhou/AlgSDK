@@ -16,7 +16,6 @@ android {
         targetSdkVersion 26
         versionCode 201910300
         versionName "5.9.0"
-        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk {
             abiFilters "x86"
@@ -52,7 +51,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(':algtasklibrary')
-    implementation 'com.android.support:multidex:1.0.1'
     implementation 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 }
