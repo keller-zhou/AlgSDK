@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.jakewharton.butterknife'
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.keller-zhou'
 
 android {
     compileSdkVersion 28
